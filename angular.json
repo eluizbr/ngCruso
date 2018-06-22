@@ -25,7 +25,14 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              {
+                "input": "./src/assets/js/require.min.js"
+              },
+              {
+                "input": "./src/assets/js/dashboard.js"
+              }              
+            ]
           },
           "configurations": {
             "production": {
