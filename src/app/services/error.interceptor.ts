@@ -11,8 +11,6 @@ export class ErrorInterceptor implements HttpInterceptor {
   intercept(req: HttpRequest<any>, next: HttpHandler) {
     return next.handle(req).pipe(
       catchError((error: HttpErrorResponse) => {
-        console.log(error.error);
-        alert(error.error);
         switch (error.status) {
           case 401:
             localStorage.clear();

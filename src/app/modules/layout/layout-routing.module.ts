@@ -6,11 +6,11 @@ import { MainComponent } from './main/main.component';
 import { AuthGuard } from './services/auth.guard';
 
 const routes: Routes = [
-  // {
-  //   path: '',
-  //   redirectTo: 'dashboard',
-  //   pathMatch: 'full'
-  // },
+  {
+    path: '',
+    redirectTo: 'dashboard',
+    pathMatch: 'full'
+  },
   {
     path: '',
     component: LayoutComponent,
@@ -19,6 +19,10 @@ const routes: Routes = [
       {
         path: 'dashboard',
         component: MainComponent
+      },
+      {
+        path: 'users',
+        loadChildren: '../users/users.module#UsersModule'
       }
     ]
   }
